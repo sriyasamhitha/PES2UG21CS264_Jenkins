@@ -10,8 +10,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                // Intentional error introduced - incorrect command
-                sh './main/hello-nonexistent'
+                // Execute the compiled hello.cpp file
+                sh './main/hello'
                 echo 'Test Stage Successful'
             }
         }
